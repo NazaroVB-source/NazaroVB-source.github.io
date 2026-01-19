@@ -1,0 +1,9 @@
+body {
+    background-color: #1a1a1a; /* Koyu Gri/Siyah Arka Plan */
+    color: white;              /* Beyaz Yazı Rengi */
+    font-family: Arial, sans-serif; /* Okunaklı font */
+    padding: 20px;             /* Yazılar kenara yapışmasın */
+}
+h1 {
+    color: #4CAF50; /* Başlık rengini yeşil yap (Linux Mint rengi gibi) */
+}
