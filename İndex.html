@@ -1,17 +1,62 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="tr">
 <head>
-    <title>NazaroVB | Dijital Atölye</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Havalı Hero — İlk Web Sitem</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-color: #1a1a1a; color: white; font-family: Arial;">
-    <h1>NazaroVB Atölyesine Hoş Geldiniz!</h1>
-    <p>Junior Yazılımcı Nazarow'un projeleri çok yakında burada olacak.</p>
-    <p>Kitaplar, yazılım tüyoları ve daha fazlası için takipte kalın!</p>
+<body>
+  <main class="hero">
+    <div class="hero-content">
+      <h1 class="title">Benim İlk Web Sitem 🌟</h1>
+      <p class="subtitle">Havalı animasyon, neon stil ve küçük etkileşimler — GitHub Pages için hazır.</p>
+      <div class="cta-row">
+        <button id="magic-btn" class="btn neon">Havalı Yap ✨</button>
+        <a class="btn ghost" href="#" target="_blank" rel="noopener">Repo'ya Git</a>
+      </div>
+      <p class="hint">Fareyle oynayın — elementi hareket ettirebilirsin. Tıkla, partiküller uçsun 💥</p>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <!-- Inline SVG: JS ile parallax uygulayacağız -->
+      <svg id="hero-svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0" stop-color="#8a2be2"/>
+            <stop offset="1" stop-color="#00d4ff"/>
+          </linearGradient>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="8" result="b"/>
+            <feMerge>
+              <feMergeNode in="b"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <g id="svg-group" filter="url(#glow)">
+          <circle cx="200" cy="180" r="120" fill="url(#g1)" opacity="0.9"/>
+          <g opacity="0.85" transform="translate(320,90) rotate(-15)">
+            <rect x="-90" y="-60" width="180" height="120" rx="20" fill="#ff7acc" opacity="0.15"/>
+            <ellipse cx="0" cy="0" rx="80" ry="50" fill="#fff" opacity="0.06"/>
+          </g>
+          <g transform="translate(420,270) scale(0.85)">
+            <path d="M0,-40 C30,-60 60,-20 40,10 C20,40 -20,50 -40,20 C-60,-10 -20,-20 0,-40z"
+                  fill="#00ffd5" opacity="0.18"/>
+          </g>
+          <g id="sparkles">
+            <!-- küçük parlayan noktalar -->
+            <circle cx="110" cy="90" r="3" fill="#fff" opacity="0.9"/>
+            <circle cx="480" cy="60" r="2.5" fill="#fff" opacity="0.75"/>
+            <circle cx="540" cy="210" r="2" fill="#fff" opacity="0.7"/>
+            <circle cx="360" cy="320" r="2.8" fill="#fff" opacity="0.8"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>NazaroVB | Dijital Atölye</title>
-    <link rel="stylesheet" href="style.css"> <!-- Bu yeni satır -->
-</head>
